@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('your-anime-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            color: white;
+        }
+        .header, .section, .footer {
+            padding: 20px;
+            margin: 10px;
+        }
+        .header {
+            font-size: 2em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+        .interactive {
+            position: relative;
+            display: inline-block;
+        }
+        .interactive .character {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('your-character.png') no-repeat center center;
+            background-size: cover;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>歡迎來到我的個人網站</h1>
+            <p>探索我的世界，了解我的興趣和工作</p>
+        </div>
+        <div class="section">
+            <h2>關於我</h2>
+            <p>我是 XXX，熱愛動漫和創作。我從事 XXX 工作，喜歡在閒暇時刻追動漫和創作插畫。</p>
+        </div>
+        <div class="section">
+            <h2>作品集</h2>
+            <div class="interactive">
+                <a href="#!" class="button">點擊查看我的作品</a>
+                <div class="character"></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>聯絡方式</h2>
+            <p>可以通過以下方式聯繫我：</p>
+            <p>Email: your-email@example.com</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 個人網站</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.interactive').forEach(function(el) {
+            el.addEventListener('mouseenter', function() {
+                const character = this.querySelector('.character');
+                character.style.transform = 'translateX(20px)';
+            });
+            el.addEventListener('mouseleave', function() {
+                const character = this.querySelector('.character');
+                character.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
